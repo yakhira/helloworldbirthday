@@ -4,12 +4,10 @@ phases:
   install:
     runtime-versions:
       docker: 18
-  tests:
-    commands:
-      - echo Run tox tests...
-      - tox 
   pre_build:
     commands:
+      - echo Run tests...
+      - tox 
       - echo Logging in to Amazon ECR...
       - aws --version
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
