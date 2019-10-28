@@ -16,7 +16,7 @@ paths:
     get:
       tags:
       - birthday
-      summary: Returns hello birthday message for the given user
+      summary: Returns hello birthday message for the given user.
       operationId: get_birthday
       parameters:
       - name: username
