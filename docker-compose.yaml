@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+    helloworld:
+        build:
+            context: .
+        ports:
+            - 8080:8080
+        volumes:
+            - ./swagger_server:/usr/src/app/swagger_server:ro
+        environment:
+            DB_HOST: localhost
+    redis:
+        image: redis
+        network_mode: service:helloworld

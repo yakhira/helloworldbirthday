@@ -1,0 +1,87 @@
+openapi: 3.0.1
+info:
+  title: Hello World API
+  description: This is simple Hello World API returns birthday for given username.
+  termsOfService: ""
+  contact:
+    email: ruslan.k.yakhin@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+tags:
+- name: birthday
+paths:
+  /hello/{username}:
+    get:
+      tags:
+      - birthday
+      summary: Returns hello birthday message for the given user
+      operationId: get_birthday
+      parameters:
+      - name: username
+        in: path
+        description: Given's username
+        required: true
+        style: simple
+        explode: false
+        schema:
+          pattern: ^[a-zA-Z]+$
+          type: string
+      responses:
+        200:
+          description: OK
+          content: {}
+        400:
+          description: Invalid username
+          content: {}
+        404:
+          description: User not Found
+          content: {}
+      x-swagger-router-controller: swagger_server.controllers.birthday_controller
+      x-openapi-router-controller: swagger_server.controllers.birthday_controller
+    put:
+      tags:
+      - birthday
+      summary: Saves/updates the given's name and date of birth in the database.
+      operationId: add_birthday
+      parameters:
+      - name: username
+        in: path
+        description: Given's username
+        required: true
+        style: simple
+        explode: false
+        schema:
+          pattern: ^[a-zA-Z]+$
+          type: string
+      requestBody:
+        description: User's date of birth
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/birthday_body'
+        required: true
+      responses:
+        204:
+          description: No Content
+          content: {}
+        400:
+          description: Invalid input
+          content: {}
+      x-swagger-router-controller: swagger_server.controllers.birthday_controller
+      x-codegen-request-body-name: dateOfBirth
+      x-openapi-router-controller: swagger_server.controllers.birthday_controller
+components:
+  schemas:
+    birthday_body:
+      required:
+      - dateOfBirth
+      type: object
+      properties:
+        dateOfBirth:
+          type: string
+          pattern: ^\d{4}-\d{2}-\d{2}$
+          example: 1985-06-25
+      description: Date of birth
+

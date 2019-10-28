@@ -1,0 +1,9 @@
+flask_testing==0.6.1
+coverage>=4.0.3
+pluggy>=0.3.1
+py>=1.4.31
+randomize>=0.13
+pycodestyle >= 2.3.1
+pydocstyle >= 3.0.0
+pytest >= 5.2.0
+pytest_mock >= 1.10.0
