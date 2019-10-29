@@ -27,5 +27,3 @@ phases:
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - echo Deploy container to ECS
-      - aws ecs create-service --service-name helloworldbirthday --cli-input-json file://ecs_task.json
