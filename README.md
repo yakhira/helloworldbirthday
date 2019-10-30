@@ -41,3 +41,11 @@ To run the server on a Docker container, please execute the following from the r
 ```bash
 docker-compose up
 ```
+
+## Amazon ECS deployment
+
+```
+http://helloworldbirthday-lb-2098004525.us-east-2.elb.amazonaws.com/ui
+```
+
+![Alt text](pipeline.png?raw=true "AWS Pipeline")
