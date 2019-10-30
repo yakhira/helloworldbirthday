@@ -57,3 +57,5 @@ Traffic to container balanced via AWS LoadBalancer.
 ![Alt text](AWSLB.png?raw=true "AWS LB")
 ![Alt text](AWSTG.png?raw=true "AWS TG")
 ![Alt text](AWSTargets.png?raw=true "AWSTargets")
+
+DB_HOST, DB_PORT, DB_PASSWORD can be overwritten in ECS task definition.
