@@ -1,24 +1,6 @@
-{
-    "executionRoleArn": "arn:aws:iam::680588230108:role/ecsTaskExecutionRole",
-    "containerDefinitions": [
-        {
-            "name": "helloworldbirthday",
-            "image": "680588230108.dkr.ecr.us-east-2.amazonaws.com/helloworldbirthday",
-            "essential": true,
-            "portMappings": [
-                {
-                    "hostPort": 80,
-                    "protocol": "tcp",
-                    "containerPort": 8080
-                }
-            ]
-        }
-    ],
-    "requiresCompatibilities": [
-        "FARGATE"
-    ],
-    "networkMode": "awsvpc",
-    "cpu": "128",
-    "memory": "256",
-    "family": "taskdef-helloworldbirthday"
-}
+[
+    {
+        "name": "helloworldbirthday",
+        "image": "680588230108.dkr.ecr.us-east-2.amazonaws.com/helloworldbirthday"
+    }
+]
