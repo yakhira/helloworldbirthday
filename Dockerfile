@@ -1,5 +1,9 @@
 FROM python:3.6-alpine
 
+ARG DB_HOST
+
+ENV DB_HOST $DB_HOST
+
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
