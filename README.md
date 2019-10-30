@@ -54,6 +54,5 @@ http://helloworldbirthday-lb-2098004525.us-east-2.elb.amazonaws.com/ui
 
 Traffic to container balanced via AWS LoadBalancer.
 
-![Alt text](AWSLB.png?raw=true "AWS LB")
 ![Alt text](AWSTG.png?raw=true "AWS TG")
 ![Alt text](AWSTargets.png?raw=true "AWSTargets")
