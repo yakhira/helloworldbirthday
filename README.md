@@ -42,10 +42,18 @@ To run the server on a Docker container, please execute the following from the r
 docker-compose up
 ```
 
-## Amazon ECS deployment
+## Amazon ECS deployment with AWS CodePipeline
+
+Deployment strategy is Rolling Update. 
 
 ```
 http://helloworldbirthday-lb-2098004525.us-east-2.elb.amazonaws.com/ui
 ```
 
-![Alt text](pipeline.png?raw=true "AWS Pipeline")
+![Alt text](pipeline.png?raw=true "AWS CodePipeline")
+
+Traffic to container balanced via AWS LoadBalancer.
+
+![Alt text](AWSLB.png?raw=true "AWS LB")
+![Alt text](AWSTG.png?raw=true "AWS TG")
+![Alt text](AWSTargets.png?raw=true "AWSTargets")
