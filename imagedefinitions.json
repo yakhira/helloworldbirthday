@@ -1,6 +1,6 @@
 [
     {
         "name": "helloworldbirthday",
-        "image": "680588230108.dkr.ecr.us-east-2.amazonaws.com/helloworldbirthday"
+        "imageUri": "680588230108.dkr.ecr.us-east-2.amazonaws.com/helloworldbirthday:latest"
     }
 ]
