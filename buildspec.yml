@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    DB_HOST: helloworldbirthdaydb.w6vutn.0001.use2.cache.amazonaws.com
+    DB_HOST: hellowroldbirth-redis.w6vutn.0001.use2.cache.amazonaws.com
 
 phases:
   install:
